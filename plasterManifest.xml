@@ -15,7 +15,7 @@
         <parameter name='full_name' type='user-fullname' prompt='Enter your name'/>
         <parameter name='email' type='user-email' prompt='Enter your email address'/>
         <parameter name='company' type='text' default='DevOpsGuys' prompt='Enter your company name'/>
-        <parameter name='project_short_description' type='text' default='' prompt='Enter a description for the module'/>
+        <parameter name='project_short_description' type='text' default="${PLASTER_PARAM_project_name}" prompt='Enter a description for the module'/>
         <parameter name='version' type='text' default='1.0.0' prompt='Enter the initial version number for the module'/>
     </parameters>
     <content>
