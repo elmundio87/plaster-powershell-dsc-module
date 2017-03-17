@@ -23,12 +23,22 @@
             Scaffold a PowerShell Module with the files required to run Pester tests, test in Azure and publish to the PSGallery.
         </message>
 
-        <newModuleManifest destination='src\${PLASTER_PARAM_project_name}.psd1'
+        <newModuleManifest destination='packages\${PLASTER_PARAM_project_name}\${PLASTER_PARAM_project_name}.psd1'
                            moduleVersion='$PLASTER_PARAM_version'
                            rootModule='${PLASTER_PARAM_project_name}.psm1'
                            author='$PLASTER_PARAM_full_name'
                            description='$PLASTER_PARAM_project_short_description'
                            encoding='UTF8-NoBOM'/>
-
+        <templateFile source='_kitchen.yml'  destination='.kitchen.yml'/>
+        <modify path='.kitchen.yml' encoding='UTF8'>
+            <replace>
+               <original><![CDATA[<!]]></original>
+               <substitute><![CDATA[<%]]></substitute>
+           </replace>
+           <replace>
+              <original><![CDATA[!>]]></original>
+              <substitute><![CDATA[%>]]></substitute>
+          </replace>
+        </modify>
     </content>
 </plasterManifest>
