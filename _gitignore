@@ -1,0 +1,11 @@
+packages/*
+!packages/<%=${PLASTER_PARAM_project_name}%>/
+
+vendor/
+.bundle/
+.kitchen/
+.kitchen.local.yml
+.paket/paket.exe
+*.nupkg
+
+.DS_Store

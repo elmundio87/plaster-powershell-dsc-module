@@ -29,6 +29,12 @@
                            author='$PLASTER_PARAM_full_name'
                            description='$PLASTER_PARAM_project_short_description'
                            encoding='UTF8-NoBOM'/>
+        <file source='Gemfile'  destination='Gemfile'/>
+        <file source='paket'  destination='paket'/>
+        <file source='paket.bat'  destination='paket.bat'/>
+        <file source='paket.dependencies'  destination='paket.dependencies'/>
+        <templateFile source='paket.template'  destination='paket.template'/>
+        <templateFile source='_gitignore'  destination='.gitignore'/>
         <templateFile source='_kitchen.yml'  destination='.kitchen.yml'/>
         <modify path='.kitchen.yml' encoding='UTF8'>
             <replace>
@@ -40,5 +46,6 @@
               <substitute><![CDATA[%>]]></substitute>
           </replace>
         </modify>
+        <file source='.paket\**' destination='Recurse'/>
     </content>
 </plasterManifest>
