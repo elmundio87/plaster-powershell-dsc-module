@@ -51,6 +51,7 @@
               <substitute><![CDATA[%>]]></substitute>
           </replace>
         </modify>
+        <file source='_dummy'  destination='packages\${PLASTER_PARAM_project_name}\DSCResources\.dummy'/>
         <message>
 
             =============================================================================================
