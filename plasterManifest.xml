@@ -35,6 +35,7 @@
         <file source='paket.dependencies'  destination='paket.dependencies'/>
         <file source='.paket\**' destination='.paket'/>
         <file source='Examples\**' destination='Examples'/>
+        <file source='helper_scripts\**' destination='helper_scripts'/>
         <file source='test/Default.Tests.ps1'
             destination='test/integration/${PLASTER_PARAM_project_name}/${PLASTER_PARAM_project_name}.Tests.ps1'/>
         <templateFile source='paket.template'  destination='paket.template'/>
