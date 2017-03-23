@@ -40,6 +40,7 @@
             destination='test/integration/${PLASTER_PARAM_project_name}/${PLASTER_PARAM_project_name}.Tests.ps1'/>
         <templateFile source='paket.template'  destination='paket.template'/>
         <templateFile source='_gitignore'  destination='.gitignore'/>
+        <templateFile source='NewResource.ps1' destination='NewResource.ps1'/>
         <templateFile source='_kitchen.yml'  destination='.kitchen.yml'/>
         <modify path='.kitchen.yml'>
             <replace>
