@@ -34,12 +34,13 @@
         <file source='paket.bat'  destination='paket.bat'/>
         <file source='paket.dependencies'  destination='paket.dependencies'/>
         <file source='.paket\**' destination='.paket'/>
+        <file source='Examples\**' destination='Examples'/>
         <file source='test/Default.Tests.ps1'
             destination='test/integration/${PLASTER_PARAM_project_name}/${PLASTER_PARAM_project_name}.Tests.ps1'/>
         <templateFile source='paket.template'  destination='paket.template'/>
         <templateFile source='_gitignore'  destination='.gitignore'/>
         <templateFile source='_kitchen.yml'  destination='.kitchen.yml'/>
-        <modify path='.kitchen.yml' encoding='UTF8'>
+        <modify path='.kitchen.yml'>
             <replace>
                <original><![CDATA[<!]]></original>
                <substitute><![CDATA[<%]]></substitute>
@@ -49,5 +50,12 @@
               <substitute><![CDATA[%>]]></substitute>
           </replace>
         </modify>
+        <message>
+
+            =============================================================================================
+            Ensure you have an azurerm credentials file set up in $env:HOMEPATH\.azure\credentials
+            =============================================================================================
+
+        </message>
     </content>
 </plasterManifest>
