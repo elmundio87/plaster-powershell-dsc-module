@@ -1,4 +1,4 @@
-pushd $PSScriptRoot\..
+pushd $PSScriptRoot
 
 & .\paket install
 & gem install bundler

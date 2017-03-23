@@ -34,7 +34,7 @@
         <file source='paket.bat'  destination='paket.bat'/>
         <file source='paket.dependencies'  destination='paket.dependencies'/>
         <file source='.paket\**' destination='.paket'/>
-        <file source='Examples\**' destination='Examples'/>
+        <templateFile source='Examples\dsc_configuration.ps1' destination='Examples\dsc_configuration.ps1'/>
         <file source='helper_scripts\**' destination='helper_scripts'/>
         <file source='test/Default.Tests.ps1'
             destination='test/integration/${PLASTER_PARAM_project_name}/${PLASTER_PARAM_project_name}.Tests.ps1'/>
@@ -53,6 +53,8 @@
           </replace>
         </modify>
         <file source='_dummy'  destination='packages\${PLASTER_PARAM_project_name}\DSCResources\.dummy'/>
+        <file source='bootstrap.ps1'  destination='bootstrap.ps1'/>
+        <file source='pack.ps1'  destination='pack.ps1'/>
         <message>
 
             =============================================================================================
